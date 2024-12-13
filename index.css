@@ -1,0 +1,206 @@
+/* Üldine stiil */
+body {
+    background: linear-gradient(135deg, #f0f4ff, #d9eaff);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigeerimismenüü */
+nav {
+    background-color: #2e629b;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Profiilipilt */
+.profile-image {
+    float: right;
+    margin: 20px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero ala */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2e629b, #4c84c7);
+    color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-links .button-link {
+    margin: 5px;
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #2e629b;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-links .button-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Sektsioonid */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    color: #2e629b;
+    margin-bottom: 10px;
+}
+
+/* Kontaktide ja lehekülgede stiil */
+#kontaktid, #pages {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#kontaktid.show, #pages.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Nupud */
+.button-link {
+    display: inline-block;
+    background-color: #4c84c7;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #2e629b;
+    transform: translateY(-3px);
+}
+
+/* Mobiilivaade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .profile-image {
+        width: 150px;
+        margin: 10px auto;
+        float: none;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero {
+        padding: 40px 10px;
+        margin: 10px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .button-link {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Sertifikaatide stiil */
+#certificates {
+    margin: 20px;
+    padding: 20px;
+}
+
+.certificate {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.certificate img {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.certificate h2 {
+    color: #2e629b;
+    margin: 0;
+}
+
+.certificate p {
+    margin: 5px 0 0;
+    color: #555;
+}

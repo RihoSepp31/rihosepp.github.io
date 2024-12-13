@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minu Õpimapp Tarkvara arendusprotsessis</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigeerimismenüü -->
+    <nav>
+        <ul>
+            <li><a href="#kes-ma-olen">Kes ma olen</a></li>
+            <li><a href="#leheküljed">Leheküljed</a></li>
+        </ul>
+    </nav>
+
+    <!-- Pilt, mis on paremal ja lehe ülaosas -->
+    <img src="./Pildid/Riho.png" alt="Riho Sepp" class="profile-image">
+
+    <!-- Hero ala gradienttaustaga ja tekstiga -->
+    <div class="hero">
+        <h1>Tere tulemast minu õpimapile!</h1>
+        <p>Avasta minu teadmised ja projektid IT-maailmas.</p>
+        <div class="hero-links">
+            <button id="toggle-contact" class="button-link">Kontakt</button>
+            <a href="https://www.linkedin.com/in/riho-sepp-3628bb2aa/" class="button-link" target="_blank">LinkedIn</a>
+            <a href="https://github.com/RihoSepp31" class="button-link" target="_blank">GitHub</a>
+            <a href="cerfiticate.html" class="button-link" target="_blank">Cerfitikaadid</a>
+            <a href="./Pildid/CVKeskus_Riho_Sepp_2160872.pdf" class="button-link" target="_blank">Laadi alla minu CV</a>
+
+        </div>
+    </div>
+
+    <section id="kes-ma-olen">
+        <h1>Kes ma olen</h1>
+        <p>Minu nimi on Riho Sepp ja ma olen IT spetsialist. Olen omandanud IT-süsteemide spetsialisti eriala Tallinna Polütehnikumis ja töötan hetkel kasutajatoe spetsialistina Eesti Kaitseliidu peakorteris. Lisaks on mul kogemus vanemkasutajatoe spetsialistina Siseministeeriumis, kus töötasin alates 2020. aastast.</p>
+        <p>Praegu õpin Tallinna Tööstushariduskeskuses noorem tarkvaraarendaja eriala, et täiendada oma teadmisi ja oskusi IT-valdkonnas. Olen alati olnud kirglik tehnoloogia vastu ning naudin uute lahenduste leidmist ja tarkvaraarenduse õppimist.</p>
+        <p>Minu eesmärk on ühendada oma kasutajatoe kogemus tarkvaraarenduse oskustega, et pakkuda terviklikke ja efektiivseid IT-lahendusi. Olen pühendunud pidevale enesearengule ning otsin alati uusi väljakutseid ja võimalusi enda oskuste rakendamiseks.</p>
+    </section>
+
+    <section id="kontaktid" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+        <h2>Kontaktid</h2>
+        <p>Email: <a href="mailto:riho.sepp@outlook.com">riho.sepp@outlook.com</a></p>
+        <p>Telefon: <a href="tel:+37256848714">56848714</a></p>
+    </section>
+
+    <!-- Lehekülgede osa, mis algselt on peidetud -->
+    <section id="leheküljed">
+        <h2>Siin on minu leheküljed:</h2>
+        <button id="toggle-pages" class="button-link">Näita lehekülgi</button>
+        <div id="pages" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+            <a href="elutsukkel/susteemiarenduse_elutsukkel.html" class="button-link">Süsteemiarenduse elutsüklisse</a>
+            <a href="casevahendid/main.html" class="button-link">Case Vahendid</a>
+            <a href="https://rihosepp.com/" class="button-link">Portfoolium</a>
+            <a href="Bitcoin/bitcoin.html" class="button-link">Bitcoin</a>
+            <a href="./UML/uml.html" class="button-link">Mis on UML</a>
+            <a href="database/database.html" class="button-link">Database</a>
+            
+        </div>
+    </section>
+
+    <script>
+        // Näita/peida lehekülgede linke sujuva animatsiooniga
+        document.getElementById('toggle-pages').addEventListener('click', function() {
+            const pages = document.getElementById('pages');
+            if (pages.style.display === 'none' || pages.style.display === '') {
+                pages.style.display = 'block';
+                setTimeout(() => {
+                    pages.style.opacity = 1;
+                }, 10);
+                this.textContent = 'Peida leheküljed';
+            } else {
+                pages.style.opacity = 0;
+                setTimeout(() => {
+                    pages.style.display = 'none';
+                }, 500);
+                this.textContent = 'Näita lehekülgi';
+            }
+        });
+
+        // Näita/peida kontaktide andmed
+        document.getElementById('toggle-contact').addEventListener('click', function() {
+            const contacts = document.getElementById('kontaktid');
+            if (contacts.style.display === 'none' || contacts.style.display === '') {
+                contacts.style.display = 'block';
+                setTimeout(() => {
+                    contacts.style.opacity = 1;
+                }, 10);
+            } else {
+                contacts.style.opacity = 0;
+                setTimeout(() => {
+                    contacts.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
