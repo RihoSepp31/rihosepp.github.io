@@ -204,3 +204,23 @@ section h1, section h2 {
     margin: 5px 0 0;
     color: #555;
 }
+
+#greeting-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  
