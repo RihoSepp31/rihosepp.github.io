@@ -1,52 +1,115 @@
 /* Üldised stiilid */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #292d30;
+}
+
+/* Päise stiil */
+header {
+    text-align: center;
     padding: 20px;
-    background: #f4f4f9;
-    color: #333;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: rgb(54, 40, 40);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Pealkirjad */
-h1, h2 {
-    color: #0056b3;
-    margin-bottom: 10px;
+/* Külgriba */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: linear-gradient(135deg, #313534, #9face6);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
-/* Lõigud */
-p {
-    margin-bottom: 1em;
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-/* Nimekirjad */
-ul {
-    padding-left: 20px;
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Lingid */
-a {
-    color: #0056b3;
-    text-decoration: none;
+.sidebar li {
+    margin: 15px 0;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Nupulaadne link */
-.button-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #0056b3;
+.sidebar a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    display: block;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-.button-link:hover {
-    background: #003f7f;
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Peamine sisu */
+main {
+    margin-left: 240px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Pildistiilid */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.responsive-image:hover {
+    transform: scale(1.05);
+}
+
+/* Jaluse stiil */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    margin-top: auto;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer p a:hover {
+    color: #e9ecef;
 }
